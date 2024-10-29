@@ -5,13 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --navbar: rgb(49 46 129);
+  --footer: rgb(129, 46, 112);
 }
 
 body {
@@ -19,3 +14,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* *&:focus{
+	border: 1px solid white;
+} */

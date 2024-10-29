@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+		navbar: "var(--navbar)",
+		footer: "var(--footer)",
       },
     },
   },
