@@ -2,6 +2,7 @@ import formFields from "../utils/formFields";
 import { fieldData, formState, TransactionInterface } from "../utils/types";
 import { useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
+import TransactionFormField from "./transactionFormField";
 
 export default function TransactionForm({
   addNew,
@@ -32,19 +33,11 @@ export default function TransactionForm({
         {formFields.map((singleField: fieldData) => {
           return (
             <div key={singleField.id}>
-              <label className="flex flex-row justify-between">
-                {singleField.label}
-                <input
-                  type={singleField.type}
-                  className="text-black"
-                  {...register(singleField.id, singleField.requirements)}
-                />
-              </label>
-              <div className="text-right text-rose-500">
-                {errors[singleField.id] && (
-                  <span>{`${errors[singleField.id]?.message}`}</span>
-                )}
-              </div>
+              <TransactionFormField
+                field={singleField}
+                register={register}
+                errors={errors}
+              />
             </div>
           );
         })}

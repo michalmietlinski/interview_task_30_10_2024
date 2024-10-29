@@ -34,7 +34,7 @@ export default function Table({
       {transactions.map((el: TransactionInterface) => {
         return (
           <SingleTransaction
-            tr={el}
+            singleTransaction={el}
             key={el.id}
             removeTransaction={removeTransaction}
           />

@@ -1,6 +1,6 @@
 import Balance from "./balance";
 import FetchAll from "../fetcher";
-import Filter from "../filter";
+import Filter from "./filter";
 import TransactionForm from "../form/transactionForm";
 import { useState, useEffect } from "react";
 import { TransactionInterface, TransactionInterfaces } from "../utils/types";
@@ -63,15 +63,15 @@ export default function Main() {
       </div>
 
       {filteredList.length > 0 && (
-        <div className="p-8 bg-amber-500">
+        <div className="p-8 bg-gray-400">
           <PaginationWrapper
-            transactions={data}
+            transactions={filteredList}
             removeTransaction={removeTransaction}
           />
         </div>
       )}
       {filteredList.length === 0 && (
-        <div className="p-8 bg-amber-500 text-white text-center">
+        <div className="p-8 bg-gray-400 text-white text-center">
           <b>No data found</b>
         </div>
       )}
