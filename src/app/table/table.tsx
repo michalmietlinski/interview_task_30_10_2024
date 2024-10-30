@@ -18,8 +18,11 @@ export default function Table({
     <div>
       <div className="flex invisible md:visible flex-row justify-end w-full gap-8  ">
         <div>
-          Page:
+          <span tabIndex={0} className="mr-4">
+            <b>Page:</b>{" "}
+          </span>
           <select
+            tabIndex={0}
             value={currentPage}
             onChange={(e) => setPage(parseInt(e.target.value))}
           >

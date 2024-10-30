@@ -13,32 +13,34 @@ export default function TransactionForm({
   const {
     register,
     handleSubmit,
-	reset,
+    reset,
     formState: { errors },
   } = useForm();
   const [created, setCreated] = useState<boolean>(false);
   const onSubmit = (data: formState) => {
-	if(!created){
-    addNew({
-      id: uuidv4(),
-      amount: data.amount,
-      account: data.account,
-      description: data.description,
-      address: data.address,
-      beneficiary: data.beneficiary,
-      date: new Date().toString(),
-    });
-	setCreated(true);
-	setTimeout(()=>{
-		setCreated(false)
-		reset();
-	},1000)
-	}
+    if (!created) {
+      addNew({
+        id: uuidv4(),
+        amount: data.amount,
+        account: data.account,
+        description: data.description,
+        address: data.address,
+        beneficiary: data.beneficiary,
+        date: new Date().toString(),
+      });
+      setCreated(true);
+      setTimeout(() => {
+        setCreated(false);
+        reset();
+      }, 1000);
+    }
   };
 
   return (
     <div className="flex flex-col gap-4">
-      <h2>Add new Transaction: {created && <span>Created Succesfully</span>}</h2>
+      <h2 tabIndex={0} className="font-bold">
+        Add new Transaction: {created && <span>Created Succesfully</span>}
+      </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
         {formFields.map((singleField: fieldData) => {
           return (
@@ -52,7 +54,6 @@ export default function TransactionForm({
           );
         })}
         <input className="cursor-pointer" type="submit" value={"Create"} />
-		
       </form>
     </div>
   );

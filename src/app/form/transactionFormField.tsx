@@ -13,7 +13,12 @@ export default function TransactionFormField({
   return (
     <div>
       <label className="flex flex-row justify-between">
-        <span className="min-w-48">{field.label}</span>
+        <span
+          tabIndex={0}
+          className="min-w-48 focus:ring focus:ring-violet-300"
+        >
+          {field.label}
+        </span>
         <input
           type={field.type}
           className="text-black grow"
@@ -21,7 +26,9 @@ export default function TransactionFormField({
         />
       </label>
       <div className="text-right text-rose-500">
-        {errors[field.id] && <span>{`${errors[field.id]?.message}`}</span>}
+        {errors[field.id] && (
+          <span tabIndex={0}>{`${errors[field.id]?.message}`}</span>
+        )}
       </div>
     </div>
   );

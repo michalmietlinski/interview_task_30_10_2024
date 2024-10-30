@@ -12,7 +12,7 @@ export default function Balance({
   }, [filteredList]);
   return (
     <div>
-      <b>Balance:</b> {balanceValue}
+      <b tabIndex={0}>Balance:</b> <span tabIndex={0}>{balanceValue}</span>
     </div>
   );
 }

@@ -12,7 +12,9 @@ export default function Filter({
   return (
     <div className="flex flex-row space-between gap-8">
       <div>
-        <b>Beneficiary</b>
+        <b tabIndex={0} className="mr-4">
+          Beneficiary
+        </b>
         <input
           onChange={(e) => setNewValue(e.target.value)}
           type="text"
@@ -20,7 +22,9 @@ export default function Filter({
         ></input>
       </div>
       <div>
-        <b>Case sensitive?</b>
+        <b tabIndex={0} className="mr-4">
+          Case sensitive?
+        </b>
         <input
           onChange={(e) => setCSValue(e.target.checked)}
           type="checkbox"
