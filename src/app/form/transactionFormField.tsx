@@ -13,10 +13,10 @@ export default function TransactionFormField({
   return (
     <div>
       <label className="flex flex-row justify-between">
-        {field.label}
+        <span className="min-w-48">{field.label}</span>
         <input
           type={field.type}
-          className="text-black"
+          className="text-black grow"
           {...register(field.id, field.requirements)}
         />
       </label>

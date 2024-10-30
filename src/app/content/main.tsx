@@ -42,12 +42,12 @@ export default function Main() {
   }, []);
   return (
     <main className="w-full max-w-screen-xl flex flex-col gap-8 py-8">
-      <div className="flex md:flex-row-reverse flex-col gap-8 bg-stone-400">
-        <div className="p-8 basis-3/6 bg-stone-800 text-white min-h-64">
+      <div className="flex md:flex-row-reverse flex-col gap-8 ">
+        <div className="p-8 basis-3/6 bg-stone-200 text-black min-h-64">
           <TransactionForm addNew={setValue} />
         </div>
 
-        <div className="basis-3/6 flex flex-col gap-8 justify-between bg-stone-300">
+        <div className="basis-3/6 flex flex-col gap-8 justify-between">
           <div className="p-8 bg-stone-100">
             <Balance filteredList={filteredList} />
           </div>

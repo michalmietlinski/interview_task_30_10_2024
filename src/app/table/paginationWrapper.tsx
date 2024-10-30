@@ -15,11 +15,6 @@ export default function PaginationWrapper({
     useState<TransactionInterfaces>([]);
 
   useEffect(() => {
-    console.log(
-      pageValue * 20 > transactions.length,
-      pageValue * 20,
-      transactions.length,
-    );
     if ((pageValue - 1) * 20 >= transactions.length) setPageValue(1);
   }, [transactions]);
 
