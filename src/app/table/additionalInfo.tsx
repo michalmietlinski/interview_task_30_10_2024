@@ -1,5 +1,4 @@
 import { TransactionInterface } from "../utils/types";
-import { useState } from "react";
 
 export default function AdditionalInfo({
   tr,

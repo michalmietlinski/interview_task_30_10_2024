@@ -27,5 +27,5 @@ export interface fieldData {
   id: string;
   type: AvailableFormtypes;
   label: string;
-  requirements: {};
+  requirements: object;
 }

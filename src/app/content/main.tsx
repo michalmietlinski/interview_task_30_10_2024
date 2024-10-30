@@ -43,7 +43,7 @@ export default function Main() {
   return (
     <main className="w-full max-w-screen-xl flex flex-col gap-8 py-8">
       <div className="flex md:flex-row-reverse flex-col gap-8 ">
-        <div className="p-8 basis-3/6 bg-stone-200 text-black min-h-64">
+        <div className="p-8 basis-3/6 bg-stone-200 text-black min-h-68">
           <TransactionForm addNew={setValue} />
         </div>
 

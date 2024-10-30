@@ -16,7 +16,7 @@ export default function PaginationWrapper({
 
   useEffect(() => {
     if ((pageValue - 1) * 20 >= transactions.length) setPageValue(1);
-  }, [transactions]);
+  }, [transactions, pageValue]);
 
   useEffect(() => {
     const start = (pageValue - 1) * 20;
