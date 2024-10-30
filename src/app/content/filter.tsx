@@ -19,6 +19,7 @@ export default function Filter({
           onChange={(e) => setNewValue(e.target.value)}
           type="text"
           value={initialValue}
+		  data-testid="testinput"
         ></input>
       </div>
       <div>
@@ -29,6 +30,7 @@ export default function Filter({
           onChange={(e) => setCSValue(e.target.checked)}
           type="checkbox"
           checked={csValue}
+		  data-testid="checkbox"
         ></input>
       </div>
     </div>

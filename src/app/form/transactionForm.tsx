@@ -1,6 +1,6 @@
 import formFields from "../utils/formFields";
 import { fieldData, formState, TransactionInterface } from "../utils/types";
-import { useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
 import TransactionFormField from "./transactionFormField";
 import { useState } from "react";
@@ -41,7 +41,7 @@ export default function TransactionForm({
       <h2 tabIndex={0} className="font-bold">
         Add new Transaction: {created && <span>Created Succesfully</span>}
       </h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+      <form onSubmit={handleSubmit(onSubmit as SubmitHandler<FieldValues>)} className="flex flex-col gap-4">
         {formFields.map((singleField: fieldData) => {
           return (
             <div key={singleField.id}>

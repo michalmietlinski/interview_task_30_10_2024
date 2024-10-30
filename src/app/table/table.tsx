@@ -19,7 +19,7 @@ export default function Table({
       <div className="flex invisible md:visible flex-row justify-end w-full gap-8  ">
         <div>
           <span tabIndex={0} className="mr-4">
-            <b>Page:</b>{" "}
+            <b>Page:</b>
           </span>
           <select
             tabIndex={0}
