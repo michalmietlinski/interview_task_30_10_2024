@@ -1,8 +1,8 @@
 {
-	"scripts": {
-		"server": "json-server api/db.json"
-	},
-	"dependencies": {
-		"json-server": "^0.17.0"
-	}
+  "scripts": {
+    "server": "json-server api/db.json"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
 }

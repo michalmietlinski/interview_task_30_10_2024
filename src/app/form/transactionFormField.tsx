@@ -16,6 +16,7 @@ export default function TransactionFormField({
         <span
           tabIndex={0}
           className="min-w-48 focus:ring focus:ring-violet-300"
+          data-testid="test-label"
         >
           {field.label}
         </span>

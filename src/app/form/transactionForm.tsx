@@ -41,7 +41,10 @@ export default function TransactionForm({
       <h2 tabIndex={0} className="font-bold">
         Add new Transaction: {created && <span>Created Succesfully</span>}
       </h2>
-      <form onSubmit={handleSubmit(onSubmit as SubmitHandler<FieldValues>)} className="flex flex-col gap-4">
+      <form
+        onSubmit={handleSubmit(onSubmit as SubmitHandler<FieldValues>)}
+        className="flex flex-col gap-4"
+      >
         {formFields.map((singleField: fieldData) => {
           return (
             <div key={singleField.id}>

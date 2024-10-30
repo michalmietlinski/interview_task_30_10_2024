@@ -6,13 +6,20 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+
+You can also run:
+
+```
+npm run build
+npm run start
 ```
 
 Open [http://localhost:3002](http://localhost:3002) with your browser to see the result.
 
+To get data:
+enter dataSource with second terminal and run
+
+```
+npm run server
+```

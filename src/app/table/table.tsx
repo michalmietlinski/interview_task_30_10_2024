@@ -16,7 +16,10 @@ export default function Table({
 }) {
   return (
     <div>
-      <div className="flex invisible md:visible flex-row justify-end w-full gap-8  ">
+      <div
+        className="flex invisible md:visible flex-row justify-end w-full gap-8"
+        data-testid="test-table"
+      >
         <div>
           <span tabIndex={0} className="mr-4">
             <b>Page:</b>
